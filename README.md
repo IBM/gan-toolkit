@@ -68,7 +68,7 @@ The aim of the toolkit is to provide a highly flexible, no-code way of implement
 
 ## Config File Structure and Details
 
-The config file is a set of key-value pairs in JSON format. A collection of sample config files are provided [here](configs/)
+The config file is a set of key-value pairs in JSON format. A collection of sample config files are provided [here](./agant/configs/)
 
 The basic structure of the `config` json file is as follows,
 
