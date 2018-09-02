@@ -1,0 +1,12 @@
+{
+    "generator":{
+        "choice":"gan"
+    },
+
+    "discriminator":{
+        "choice":"gan"
+    },
+        
+    "data_path":"datasets/dataset1.p",
+    "metric_evaluate":"MMD"
+}

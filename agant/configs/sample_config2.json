@@ -1,0 +1,27 @@
+{
+    "result_path":"train_results/GAN2",
+    "save_model_path":"saved_models/GAN2",
+    "sample_interval":400,
+    "performance_log":"logs/GAN2",
+    "generator":{
+        "choice":"gan"
+    },
+
+    "discriminator":{
+        "choice":"gan"
+    },
+
+    "GAN_model":{
+        "epochs":1,
+        "mini_batch_size":64,
+        "clip_value":0.01,
+        "n_critic":5,
+        "lambda_gp":-1,
+        "w_loss":1,
+        "data_label":0,
+        "classes":-1
+    },
+    
+    "data_path":"datasets/dataset1.p",
+    "metric_evaluate":"FID"
+}

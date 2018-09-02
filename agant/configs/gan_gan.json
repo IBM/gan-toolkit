@@ -1,0 +1,22 @@
+{
+    "result_path":"train_results/Comb/GAN/GAN",
+    "save_model_path":"saved_models/Comb/GAN/GAN",
+    "performance_log":"logs/Comb/GAN/GAN",
+    "sample_interval":1,
+    "GAN_model":{
+        "epochs":"10"     
+    },
+
+    "generator":{
+        "choice":"gan",
+	"channels":1
+    },
+
+    "discriminator":{
+        "choice":"gan",
+	"channels":1
+    },
+    
+    "data_path":"datasets/dataset1.p",
+    "metric_evaluate":"MMD"
+}

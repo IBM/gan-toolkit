@@ -1,0 +1,20 @@
+{
+    "result_path":"train_results/Comb/WGAN_GP/GAN",
+    "save_model_path":"saved_models/Comb/WGAN_GP/GAN",
+    "performance_log":"logs/Comb/WGAN_GP/GAN",
+    "GAN_model":{
+        "epochs":"50"
+    },
+
+    "generator":{
+        "choice":"wgan_gp"
+    },
+
+    "discriminator":{
+        "choice":"gan"
+    },
+
+    "data_path":"datasets/dataset1.p",
+    "metric_evaluate":"MMD"
+}
+

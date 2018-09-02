@@ -1,0 +1,21 @@
+{
+    "result_path":"train_results/Comb/DCGAN/GAN",
+    "save_model_path":"saved_models/Comb/DCGAN/GAN",
+    "performance_log":"logs/Comb/DCGAN/GAN",
+    "GAN_model":{
+        "epochs":"50"
+    },
+
+    "generator":{
+        "choice":"dcgan"
+    },
+
+    "discriminator":{
+        "choice":"gan",
+	"input_shape":32
+    },
+
+    "data_path":"datasets/dataset1.p",
+    "metric_evaluate":"MMD"
+}
+

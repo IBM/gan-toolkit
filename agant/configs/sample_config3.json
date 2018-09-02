@@ -1,0 +1,32 @@
+{
+    "result_path":"train_results/GAN3",
+    "save_model_path":"saved_models/GAN3",
+    "performance_log":"logs/GAN3",
+    "generator":{
+        "choice":"dcgan",
+        "optimizer":{
+                "choice":"Adam",
+                "learning_rate":0.01
+            },
+        "loss": "Mean"
+    },
+
+    "discriminator":{
+        "choice":"wgan",
+        "input_shape":32
+    },
+
+    "GAN_model":{
+        "epochs":1,
+        "mini_batch_size":64,
+        "clip_value":0.01,
+        "n_critic":5,
+        "lambda_gp":1,
+        "w_loss":1,
+        "data_label":0,
+        "classes":-1
+    },
+    
+    "data_path":"datasets/dataset1.p",
+    "metric_evaluate":"FID"
+}
