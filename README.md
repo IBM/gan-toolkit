@@ -100,7 +100,7 @@ The details of the config files are provided here:
         - `b1`: < int > //  Coefficients used for computing running averages of gradient and its square. Used in Adam optimizer.
         - `b2`: < int > //  Coefficients used for computing running averages of gradient and its square. Used in Adam optimizer.
 
-- `generator`: < json > value which contains the details of the discriminator module. The available parameters and possible values are:
+- `discriminator`: < json > value which contains the details of the discriminator module. The available parameters and possible values are:
     - `choice`: ["gan", "cgan", "dcgan", "cycle_gan", "wgan", "wgan_gp", "seq_gan"] // choice of the discriminator module
     - `input_shape`: < int > // row size of the input image
     - `channels`: < int > // number of channels in the input image
@@ -146,6 +146,7 @@ Realizing the importance of easiness in training GAN models, there are a few oth
 
 ## TO-DO
 
+Immediate tasks:
  - Better the performance of seq-GAN 
  - Implement a textGAN for text based applications
  - Study and implement better transfer learning approaches
@@ -153,6 +154,12 @@ Realizing the importance of easiness in training GAN models, there are a few oth
  - Check if making optimizer as cuda is also important or not
  - Check the input for generator and discriminator to conf_data
  - Find a smart way to check the size of the reward
+ 
+Long term tasks:
+ - Implement driver and support for Keras and PyTorch
+ - Implement more popular GAN models in this framework
+ - Implement more metrics to evaluate different GAN models
+ - Support multimodal data generation for GAN frameworks
 
 ## Credits
 
