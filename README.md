@@ -59,11 +59,9 @@ The aim of the toolkit is to provide a highly flexible, no-code way of implement
 
 3. DC-GAN: Deep Convolutional Generative Adversarial Network  ([Radford et al., 2016](https://arxiv.org/abs/1511.06434))
 
-4. Cycle-GAN: Cycle-Consistent Adversarial Networks ([Zhu et al., 2017](https://arxiv.org/abs/1703.10593))
+4. W-GAN: Wasserstein GAN    ([Arjovsky et al., 2017](https://arxiv.org/abs/1701.07875))
 
-5. W-GAN: Wasserstein GAN    ([Arjovsky et al., 2017](https://arxiv.org/abs/1701.07875))
-
-6. W-GAN-GP: Improved Training of Wasserstein GANs  ([Goodfellow et al., 2017](https://arxiv.org/abs/1704.00028))
+5. W-GAN-GP: Improved Training of Wasserstein GANs  ([Goodfellow et al., 2017](https://arxiv.org/abs/1704.00028))
 
 
 ## Config File Structure and Details
@@ -88,7 +86,7 @@ The basic structure of the `config` json file is as follows,
 The details of the config files are provided here:
 
 - `generator`: < json > value which contains the details of the generator module. The available parameters and possible values are:
-    - `choice`: ["gan", "cgan", "dcgan", "cycle_gan", "wgan", "wgan_gp"] // choice of the generator module
+    - `choice`: ["gan", "cgan", "dcgan", "wgan", "wgan_gp"] // choice of the generator module
     - `input_shape`: < int > // row size of the input image
     - `channels`: < int > // number of channels in the input image
     - `latent_dim`: < int > // the size of the input random vector
@@ -101,7 +99,7 @@ The details of the config files are provided here:
         - `b2`: < int > //  Coefficients used for computing running averages of gradient and its square. Used in Adam optimizer.
 
 - `discriminator`: < json > value which contains the details of the discriminator module. The available parameters and possible values are:
-    - `choice`: ["gan", "cgan", "dcgan", "cycle_gan", "wgan", "wgan_gp", "seq_gan"] // choice of the discriminator module
+    - `choice`: ["gan", "cgan", "dcgan", "wgan", "wgan_gp", "seq_gan"] // choice of the discriminator module
     - `input_shape`: < int > // row size of the input image
     - `channels`: < int > // number of channels in the input image
     - `input`: "[(g_channels, g_input_shape, g_input_shape), g_latent_dim]" // of the given format of input data
