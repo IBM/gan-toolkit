@@ -24,8 +24,13 @@ class Metric:
 
         """
         B = true_data.size(0)
-        x = true_data.view(true_data.size(0),true_data.size(2)*true_data.size(3))
-        y = generated_data.view(generated_data.size(0), generated_data.size(2) * generated_data.size(3))
+        t = true_data.shape
+        l = len(t)
+        feature_dim = 1
+        for i in range(1,l):
+          feature_dim = feature_dim*t[i]
+        x = true_data.view(true_data.size(0),feature_dim)
+        y = generated_data.view(generated_data.size(0),feature_dim)
         #print (x.shape)
         
         '''
@@ -54,4 +59,5 @@ class Metric:
         output = beta * (torch.sum(K)+torch.sum(L)) - gamma * torch.sum(P)
         #print (output.data.numpy())
 
-        return output.data.numpy()
+        #return output.data.numpy()
+        return output

@@ -28,6 +28,9 @@ def reading_data(conf_data):
 
 		#Loading the dataset.
 		dataset = pickle.load( open( conf_data['data_path'], "rb" ) )
+		#print ("This is the dataset",conf_data['data_path'])
+		#print (dataset.shape)
+		#exit()
 		if conf_data['GAN_model']['data_label'] == 1:
 			dataset_img = dataset[0]
 			dataset_label = dataset[1]

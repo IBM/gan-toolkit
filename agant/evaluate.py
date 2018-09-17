@@ -14,6 +14,7 @@ def evaluate(conf_data):
     	Evaluation metric score. 		
 
 	"""
+	cuda = conf_data['cuda']
 	evaluation_metric = conf_data['evaluation_metric']
 	generator = conf_data['generator_model']
 	g_latent_dim = int(conf_data['generator']['latent_dim'])
@@ -41,7 +42,10 @@ def evaluate(conf_data):
 	
 	#generated_data = samples.data.numpy()
 	score = evaluation_metric.calculate(true_data,samples)
-	
+	if cuda:
+		score = score.cpu().data.numpy()
+	else:
+		score = score.data.numpy()          	
 	log_file = conf_data['log_file']
 	log_file.write(conf_data['metric_evaluate']+" score of the trained GAN is = {}\n".format(score))
 	#log_file.close()

@@ -9,14 +9,14 @@
 
     "generator":{
         "choice":"gan",
-	"channels":1
+	"channels":3
     },
 
     "discriminator":{
         "choice":"gan",
-	"channels":1
+	"channels":3
     },
     
-    "data_path":"datasets/dataset1.p",
+    "data_path":"datasets/dataset2.p",
     "metric_evaluate":"MMD"
 }

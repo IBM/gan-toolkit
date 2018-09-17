@@ -28,6 +28,7 @@ if __name__ == "__main__":
 	configured_parameters = save_models(configured_parameters)
 	if conf_data['GAN_model']['seq'] == 0:
 		score = evaluate(conf_data)
+		#score = 0
 
 	log_file = conf_data['log_file']
 	log_file.write(" Time of training (Avg over epochs) = {} \n".format(float(training_time/float(conf_data['GAN_model']['epochs']))))
