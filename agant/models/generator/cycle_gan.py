@@ -27,8 +27,8 @@ class Generator(nn.Module):
     def __init__(self, arr):
         super(GeneratorResNet, self).__init__()
         in_channels = arr[0]
-    	out_channels = arr[1]
-    	res_blocks = arr[2]
+        out_channels = arr[1]
+        res_blocks = arr[2]
 
         # Initial convolution block
         model = [   nn.ReflectionPad2d(3),
