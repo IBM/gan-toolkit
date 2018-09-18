@@ -3,6 +3,7 @@
     "save_model_path":"saved_models/Comb/GAN/GAN",
     "performance_log":"logs/Comb/GAN/GAN",
     "sample_interval":1,
+    "cuda":"False",
     "GAN_model":{
         "epochs":1     
     },
