@@ -1,0 +1,23 @@
+{
+    "result_path":"train_results/Comb/GAN/GAN",
+    "save_model_path":"saved_models/Comb/GAN/GAN",
+    "performance_log":"logs/Comb/GAN/GAN",
+    "sample_interval":1,
+    "cuda":"False",
+    "GAN_model":{
+        "epochs":1     
+    },
+
+    "generator":{
+        "choice":"gan",
+	"channels":3
+    },
+
+    "discriminator":{
+        "choice":"gan",
+	"channels":3
+    },
+    
+    "data_path":"datasets/dataset2.p",
+    "metric_evaluate":"MMD"
+}

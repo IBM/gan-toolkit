@@ -32,13 +32,8 @@ def reading_data(conf_data):
 			dataset_img = dataset[0]
 			dataset_label = dataset[1]
 
-			#dataset_img = dataset_img[:100]
-			#dataset_label = dataset_label[:100]
 		else:
 			dataset_img = dataset
-			#dataset_img = dataset_img[:100]
-		# print ("here")
-		# print (dataset.shape)
 
 		
 		transform=transforms.Compose([transforms.Resize(g_input_shape), transforms.ToTensor(),transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]) #Transformation function to normalise the iamge pixel values within the range -1 and 1, 

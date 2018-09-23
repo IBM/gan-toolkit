@@ -4,7 +4,7 @@
     "performance_log":"logs/Comb/GAN/GAN",
     "sample_interval":1,
     "GAN_model":{
-        "epochs":"10"     
+        "epochs":1     
     },
 
     "generator":{
