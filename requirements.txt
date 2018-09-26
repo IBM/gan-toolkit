@@ -1,5 +1,7 @@
-torch
-numpy 
-torchvision
-validator.py
-tqdm
+torch==0.4.1
+numpy==1.14.1
+torchvision==0.2..1
+validator.py==1.2.5
+tqdm==4.26.0
+tensorflow==1.4.0
+keras==2.1.3
