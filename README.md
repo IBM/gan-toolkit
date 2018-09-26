@@ -1,6 +1,8 @@
 # gan-toolkit
 The aim of the toolkit is to provide a highly flexible, no-code way of implementing GAN models. By providing the details of a GAN model, in an intuitive config file or as command line arguments, the code could be generated for training the GAN model. With very little or no prior knowledge about GAN, people could play around with different formulations of GAN and mix-and-match GAN modules to create novel models, as well.
 
+The toolkit is still under development. Comments, bug reports, and extensions are highly appreciated. Get in touch with us on [Slack](https://gan-toolkit.slack.com) (invite [here](https://join.slack.com/t/gan-toolkit/shared_invite/enQtNDQzMzA4OTM5NTU0LTczZTM4MmYyNmE4ZjI0ZGU5MTdkM2MzMWZkNDFmMjNhNTBhMTE3MmI2YmY2YWQxMzkzODExNjBiYThjMzZiOTk))!
+
 ## Modular GAN Architecture
 
 ![GAN Architecture](images/gan_toolkit_architecture.png?raw=true "Modular GAN Architecture")
