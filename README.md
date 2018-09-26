@@ -27,6 +27,7 @@ The toolkit is still under development. Comments, bug reports, and extensions ar
 
     ```shell
     $ git clone https://github.com/IBM/gan-toolkit
+    $ cd gan-toolkit
     ```
 
 2. Install all the requirements. Tested for Python 3.5.x+
