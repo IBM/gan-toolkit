@@ -115,7 +115,7 @@ def train_GAN(conf_data):
         elif seq == 1: #TODO: Change this back to 1
             to_iter = [1]
 
-        for i, iterator in enumerate(to_iter):
+        for j, iterator in enumerate(to_iter):
             optimizer_D = conf_data['discriminator_optimizer']
             optimizer_G = conf_data['generator_optimizer']
 
@@ -129,7 +129,7 @@ def train_GAN(conf_data):
                 
 
             #print ("Reached here --------------> ")
-            conf_data['iterator'] = i 
+            conf_data['iterator'] = j
             if seq == 0:
                 
                 if data_label == 1:
@@ -169,7 +169,7 @@ def train_GAN(conf_data):
             optimizer_D.zero_grad()
             if seq == 1:#TODO change this back to 1
                 dis_data_iter = DisDataIter(POSITIVE_FILE, NEGATIVE_FILE, mini_batch_size)
-            for i in range(temp): # TODO: Make this a parameter -> for x updates --> I am read the stored models here as well. Should I reamove this ???
+            for i in range(temp): # TODO: Make this a parameter 
                 optimizer_D = conf_data['discriminator_optimizer']
                 optimizer_G = conf_data['generator_optimizer']
 
@@ -249,13 +249,10 @@ def train_GAN(conf_data):
            # print ("------------------ Here (train_GAN.py)")
 
             if seq == 0:
-                batches_done = epoch * len(dataloader) + i
+                batches_done = epoch * len(dataloader) + j
                 if batches_done % int(conf_data['sample_interval']) == 0:
                     if classes <= 0:
-                        # print ("Here")
-                        # print (type(gen_imgs.data[:25]))
-                        # print (gen_imgs.data[:25].shape)
-                        save_image(gen_imgs.data[:25], conf_data['result_path']+'/%d.png' % batches_done, nrow=5, normalize=True) 
+                        save_image(gen_imgs.data[:25], conf_data['result_path']+'/%d_%d.png' % (epoch,batches_done), nrow=5, normalize=True) 
                     elif classes > 0:
                         sample_image(10,batches_done,conf_data)
         if seq == 0:
