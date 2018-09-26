@@ -1,4 +1,6 @@
 import json
+import datetime
+import os
 
 def default_values(conf_data):
 	"""Setting default values based on choice on networks.
@@ -59,15 +61,18 @@ def default_values(conf_data):
 		if conf_data['GAN_model'].get(param) == None or conf_data['GAN_model'][param] == None:
 			conf_data['GAN_model'][param] = GAN_model_template[param]
 
-
+	directory_name = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M")
 	if conf_data.get('save_model_path','') == '' or conf_data['save_model_path'] == None:
-		conf_data['save_model_path'] = template_data['save_model_path']
+		os.makedirs(template_data['save_model_path'] + '/' + directory_name)
+		conf_data['save_model_path'] = template_data['save_model_path'] + '/' + directory_name
 	if conf_data.get('result_path','') == '' or conf_data['result_path'] == None:
-		conf_data['result_path'] = template_data['result_path'] 
+		os.makedirs(template_data['result_path'] + '/' + directory_name)
+		conf_data['result_path'] = template_data['result_path'] + '/' + directory_name
+	if conf_data.get('performance_log','') == '' or conf_data['performance_log'] == None:
+		os.makedirs(template_data['performance_log'] + '/' + directory_name)
+		conf_data['performance_log'] =  template_data['performance_log'] + '/' + directory_name
 	if conf_data.get("sample_interval",0) == 0 or conf_data["sample_interval"] == None:
 		conf_data["sample_interval"] = template_data["sample_interval"]
-	if conf_data.get('performance_log','') == '' or conf_data['performance_log'] == None:
-		conf_data['performance_log'] =  template_data['performance_log']
 	if conf_data.get('metric_evaluate','') == '' or conf_data['metric_evaluate'] == None:
 		conf_data['metric_evaluate'] = template_data['metric_evaluate']
 	
