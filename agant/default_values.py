@@ -61,7 +61,7 @@ def default_values(conf_data):
 		if conf_data['GAN_model'].get(param) == None or conf_data['GAN_model'][param] == None:
 			conf_data['GAN_model'][param] = GAN_model_template[param]
 
-	directory_name = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M")
+	directory_name = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M")
 	if conf_data.get('save_model_path','') == '' or conf_data['save_model_path'] == None:
 		os.makedirs(template_data['save_model_path'] + '/' + directory_name)
 		conf_data['save_model_path'] = template_data['save_model_path'] + '/' + directory_name
