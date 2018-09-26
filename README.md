@@ -148,19 +148,20 @@ Realizing the importance of easiness in training GAN models, there are a few oth
 ## TO-DO
 
 Immediate tasks:
- - Better the performance of seq-GAN 
- - Implement a textGAN for text based applications
- - Study and implement better transfer learning approaches
- - Check out different weight init for GANs 
- - Check if making optimizer as cuda is also important or not
- - Check the input for generator and discriminator to conf_data
- - Find a smart way to check the size of the reward
+ - [ ]  Better the performance of seq-GAN 
+ - [ ]  Implement a textGAN for text based applications
+ - [ ]  Study and implement better transfer learning approaches
+ - [ ]  Check out different weight init for GANs 
+ - [ ]  Check if making optimizer as cuda is also important or not
+ - [ ]  Check the input for generator and discriminator to conf_data
+ - [ ]  Find a smart way to check the size of the reward
  
 Long term tasks:
- - Implement driver and support for Keras and PyTorch
- - Implement more popular GAN models in this framework
- - Implement more metrics to evaluate different GAN models
- - Support multimodal data generation for GAN frameworks
+ - [ ]  Implement driver and support for Keras
+  - [ ]  Implement driver and support for Tensorflow
+ - [ ]  Implement more popular GAN models in this framework
+ - [ ]  Implement more metrics to evaluate different GAN models
+ - [ ]  Support multimodal data generation for GAN frameworks
 
 ## Credits
 
