@@ -86,54 +86,7 @@ The basic structure of the `config` json file is as follows,
     }
 ```
 
-The details of the config files are provided here:
-
-- `generator`: < json > value which contains the details of the generator module. The available parameters and possible values are:
-    - `choice`: ["gan", "cgan", "dcgan", "wgan", "wgan_gp"] // choice of the generator module
-    - `input_shape`: < int > // row size of the input image
-    - `channels`: < int > // number of channels in the input image
-    - `latent_dim`: < int > // the size of the input random vector
-    - `input`: "[(g_channels, g_input_shape, g_input_shape), g_latent_dim]" // of the given format of input data
-    - `loss`: ["Mean", "MSE", "BCE", "NLL"] // choice of the loss function
-    - `optimizer`: < json > value of the optimizer and it's parameters
-        - `choice`: ["Adam", "RMSprop"]
-        - `learning_rate`: < int > // learning rate of the optimizer
-        - `b1`: < int > //  Coefficients used for computing running averages of gradient and its square. Used in Adam optimizer.
-        - `b2`: < int > //  Coefficients used for computing running averages of gradient and its square. Used in Adam optimizer.
-
-- `discriminator`: < json > value which contains the details of the discriminator module. The available parameters and possible values are:
-    - `choice`: ["gan", "cgan", "dcgan", "wgan", "wgan_gp", "seq_gan"] // choice of the discriminator module
-    - `input_shape`: < int > // row size of the input image
-    - `channels`: < int > // number of channels in the input image
-    - `input`: "[(g_channels, g_input_shape, g_input_shape), g_latent_dim]" // of the given format of input data
-    - `loss`: ["Mean", "MSE", "BCE", "NLL"] // choice of the loss function
-    - `optimizer`: < json > value of the optimizer and it's parameters
-        - `choice`: ["Adam", "RMSprop"]
-        - `learning_rate`: < int > // learning rate of the optimizer
-        - `b1`: < int > //  Coefficients used for computing running averages of gradient and its square. Used in Adam optimizer.
-        - `b2`: < int > //  Coefficients used for computing running averages of gradient and its square. Used in Adam optimizer.
-
-- `data_path`: "path/of/data/in/local/system"
-
-- `metric_evaluate`: ["MMD", "FID"]  // maximum mean discrepancy
-
-- `GAN_model`: < json > format providing the meta details for training the GAN model
-    - `epochs`: < int > // number of epochs for training
-    - `mini_batch_size`: < int > // size of each mini batch
-    - `clip_value`: < int > // the peak clip value
-    - `n_critic`: < int > // the number of critics required for wgan
-    - `lambda_gp`: < int > // the parameter for wgan_gp
-    - `data_label`: < int > // the parameter required for cgan
-    - `classes`: < int > // the number of classes in the given real data
-    - `seq`: < binary > // 0 or 1 on whether the generation is single value or sequential. Used for seq_gan
-
-- `result_path`: "path/to/write/resulting/images" 
-
-- `save_model_path`:  "path/to/write/trained/model" 
-
-- `performance_log`:  "path/to/write/training/logs" 
-
-- `sample_interval`:  "frequency/to/write/resulting/images"
+The details of the config files are provided [here](https://github.com/IBM/gan-toolkit/wiki/Config-File-Structure-and-Details)
 
 ## Comparison with Other Toolkits
 
